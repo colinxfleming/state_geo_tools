@@ -1,10 +1,20 @@
 # StateGeoTools
 
+These are tools to save me from having to copy and paste the same state
+constants across tools. Quick and dirty for now.
+
+TODOS:
+
+* push to rubygems
+* ci build
+* all those functions I've written that are 'count west virginia and virginia separately'
+* option rename DC to whatever bonkers things people put down
+* tests
+
+
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/state_geo_tools`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
+## Installation (doesn't work yet)
 
 Add this line to your application's Gemfile:
 
@@ -22,7 +32,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### StateGeoTools.states
+
+```
+irb(main):001:0> StateGeoTools.states
+=> ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "American Samoa", "District of Columbia", "Washington, D.C.", "Federated States of Micronesia", "Guam", "Marshall Islands", "Northern Mariana Islands", "Palau", "Puerto Rico", "Virgin Islands"]
+```
+
+### StateGeoTools.state_codes
+
+```
+irb(main):002:0> StateGeoTools.state_codes
+=> ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY", "AS", "DC", "DC", "FM", "GU", "MH", "MP", "PW", "PR", "VI"]
+```
 
 ## Development
 
