@@ -1,4 +1,4 @@
-# 
+#
 module StateConstants
   STATES_WITH_CODES = [
     { state: 'Alabama', state_abbrev: 'AL' },
