@@ -1,7 +1,10 @@
 # StateGeoTools
 
 These are tools to save me from having to copy and paste the same state
-constants across tools. Quick and dirty for now.
+constants across tools when I need to iterate thru a list of states
+(which is basically all the time).
+
+Quick and dirty for now. Probably don't use this yet.
 
 TODOS:
 
