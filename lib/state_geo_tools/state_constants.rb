@@ -68,5 +68,4 @@ module StateConstants
 
   TERRITORIES = ['American Samoa', 'Guam', 'Northern Mariana', 'Puerto Rico',
                  'U.S. Virgin Islands'].freeze
-
 end

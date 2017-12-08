@@ -1,6 +1,7 @@
-require "state_geo_tools/version"
-require "state_geo_tools/state_constants"
+require 'state_geo_tools/version'
+require 'state_geo_tools/state_constants'
 
+# Base class
 module StateGeoTools
   include StateConstants
 
