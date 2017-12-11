@@ -1,5 +1,6 @@
 require 'test_helper'
 
+# Test state constant contents
 class StateConstantsTest < Minitest::Spec
   describe 'states' do
     before { @states = StateGeoTools::States::STATES }

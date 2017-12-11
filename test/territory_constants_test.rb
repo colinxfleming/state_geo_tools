@@ -1,5 +1,6 @@
 require 'test_helper'
 
+# Test territory constants
 class TerritoryConstantsTest < Minitest::Spec
   describe 'territories' do
     before { @territories = StateGeoTools::Territories::TERRITORIES }
