@@ -8,22 +8,22 @@ class StateGeoToolsTest < Minitest::Spec
 
   describe 'constant returns' do
     it 'should spit out states' do
-      assert_equal StateGeoCodes.states, StateGeoCodes::States::STATES
+      assert_equal StateGeoTools.states, StateGeoTools::States::STATES
     end
 
     it 'should spit out state codes' do
-      assert_equal StateGeoCodes.state_codes,
-                   StateGeoCodes::States::STATE_CODES
+      assert_equal StateGeoTools.state_codes,
+                   StateGeoTools::States::STATE_CODES
     end
 
     it 'should spit out territories' do
-      assert_equal StateGeoCodes.territories,
-                   StateGeoCodes::Territories::TERRITORIES
+      assert_equal StateGeoTools.territories,
+                   StateGeoTools::Territories::TERRITORIES
     end
 
     it 'should spit out territory codes' do
-      assert_equal StateGeoCodes.territory_codes,
-                   StateGeoCodes::Territories::TERRITORY_CODES
+      assert_equal StateGeoTools.territory_codes,
+                   StateGeoTools::Territories::TERRITORY_CODES
     end
   end
 end
