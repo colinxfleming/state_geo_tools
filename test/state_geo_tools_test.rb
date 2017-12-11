@@ -1,11 +1,29 @@
 require 'test_helper'
 
-class StateGeoToolsTest < Minitest::Test
-  def test_that_it_has_a_version_number
+# Test the class public api!
+class StateGeoToolsTest < Minitest::Spec
+  it 'should have a version number' do
     refute_nil StateGeoTools::VERSION
   end
 
-  def test_it_does_something_useful
-    # assert 
+  describe 'constant returns' do
+    it 'should spit out states' do
+      assert_equal StateGeoCodes.states, StateGeoCodes::States::STATES
+    end
+
+    it 'should spit out state codes' do
+      assert_equal StateGeoCodes.state_codes,
+                   StateGeoCodes::States::STATE_CODES
+    end
+
+    it 'should spit out territories' do
+      assert_equal StateGeoCodes.territories,
+                   StateGeoCodes::Territories::TERRITORIES
+    end
+
+    it 'should spit out territory codes' do
+      assert_equal StateGeoCodes.territory_codes,
+                   StateGeoCodes::Territories::TERRITORY_CODES
+    end
   end
 end
