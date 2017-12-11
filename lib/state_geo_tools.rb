@@ -4,22 +4,19 @@ require 'state_geo_tools/territory_constants'
 
 # Base class
 module StateGeoTools
-  include StateConstants
-  include TerritoryConstants
-
   def self.states
-    STATES
+    States::STATES
   end
 
   def self.state_codes
-    STATE_CODES
+    States::STATE_CODES
   end
 
   def self.territories
-    TERRITORIES
+    Territories::TERRITORIES
   end
 
   def self.territory_codes
-    TERRITORY_CODES
+    Territories::TERRITORY_CODES
   end
 end

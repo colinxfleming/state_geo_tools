@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time='0.000017' skipped='0' failures='0' errors='0' name="TerritoryConstantsTest" assertions='1' tests='2'>
+  <testcase time='0.000012' file="test/territory_constants_test.rb" name="test_that_it_has_a_version_number" assertions='1'>
+  </testcase>
+  <testcase time='0.000005' file="test/territory_constants_test.rb" name="test_it_does_something_useful" assertions='0'>
+  </testcase>
+</testsuite>
