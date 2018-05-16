@@ -9,6 +9,8 @@ module StateGeoTools
       { name: 'Colorado', abbrev: 'CO' },
       { name: 'Connecticut', abbrev: 'CT' },
       { name: 'Delaware', abbrev: 'DE' },
+      # Statehood for DC: An opinion I am expressing in code by including DC
+      { name: 'District of Columbia', abbrev: 'DC', also_known_as: ['Washington, DC', 'Washington DC'] },
       { name: 'Florida', abbrev: 'FL' },
       { name: 'Georgia', abbrev: 'GA' },
       { name: 'Hawaii', abbrev: 'HI' },
@@ -50,9 +52,7 @@ module StateGeoTools
       { name: 'Washington', abbrev: 'WA' },
       { name: 'West Virginia', abbrev: 'WV' },
       { name: 'Wisconsin', abbrev: 'WI' },
-      { name: 'Wyoming', abbrev: 'WY' },
-      # Statehood for DC: An opinion I am expressing in code by including DC here
-      { name: 'Washington, D.C.', abbrev: 'DC', also_known_as: ['District of Columbia', 'Washington, DC', 'Washington DC'] }
+      { name: 'Wyoming', abbrev: 'WY' }
     ].freeze
 
     STATES = STATES_WITH_CODES.map { |state| state[:name] }.freeze
