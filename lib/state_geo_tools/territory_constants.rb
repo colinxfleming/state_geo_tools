@@ -1,6 +1,6 @@
 module StateGeoTools
   module Territories
-    TERRITORIES_WITH_CODES = [
+    TERRITORY_DATA = [
       { name: 'American Samoa', abbrev: 'AS' },
       { name: 'Federated States of Micronesia', abbrev: 'FM' },
       { name: 'Guam', abbrev: 'GU' },
@@ -11,7 +11,7 @@ module StateGeoTools
       { name: 'Virgin Islands', abbrev: 'VI' }
     ].freeze
 
-    TERRITORIES = TERRITORIES_WITH_CODES.map { |terr| terr[:name] }.freeze
-    TERRITORY_CODES = TERRITORIES_WITH_CODES.map { |terr| terr[:abbrev] }.freeze
+    TERRITORIES = TERRITORY_DATA.map { |terr| terr[:name] }.freeze
+    TERRITORY_CODES = TERRITORY_DATA.map { |terr| terr[:abbrev] }.freeze
   end
 end
