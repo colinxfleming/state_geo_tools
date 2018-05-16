@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module StateGeoTools
   module States
     STATE_DATA = [
