@@ -1,6 +1,6 @@
 module StateGeoTools
   module States
-    STATES_WITH_CODES = [
+    STATE_DATA = [
       { name: 'Alabama', abbrev: 'AL' },
       { name: 'Alaska', abbrev: 'AK' },
       { name: 'Arizona', abbrev: 'AZ' },
@@ -55,7 +55,7 @@ module StateGeoTools
       { name: 'Wyoming', abbrev: 'WY' }
     ].freeze
 
-    STATES = STATES_WITH_CODES.map { |state| state[:name] }.freeze
-    STATE_CODES = STATES_WITH_CODES.map { |state| state[:abbrev] }.freeze
+    STATES = STATE_DATA.map { |state| state[:name] }.freeze
+    STATE_CODES = STATE_DATA.map { |state| state[:abbrev] }.freeze
   end
 end
