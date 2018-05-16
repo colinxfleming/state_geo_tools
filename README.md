@@ -19,7 +19,7 @@ TODOS:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'state_geo_tools', 
+gem 'state_geo_tools' 
 ```
 
 And then execute:
