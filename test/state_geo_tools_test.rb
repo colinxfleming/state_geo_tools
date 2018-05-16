@@ -26,4 +26,20 @@ class StateGeoToolsTest < Minitest::Spec
                    StateGeoTools::Territories::TERRITORY_CODES
     end
   end
+
+  describe 'counters methods' do
+    before do
+      @string = 'The Simpsons are from New Mexico, and will visit Guam.'
+    end
+
+    it 'should count states from a string' do
+      assert_equal StateGeoTools.count_states_in(@string),
+                   { 'New Mexico': 1 }
+    end
+
+    it 'should count territories from a string' do
+      assert_equal StateGeoTools.count_territories_in(@string),
+                   { 'Guam': 1 }
+    end
+  end
 end

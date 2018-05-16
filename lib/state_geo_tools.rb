@@ -30,6 +30,6 @@ module StateGeoTools
   end
 
   def self.count_territories_in(string)
-    count_instances string, Territories::Territories
+    count_instances string, Territories::TERRITORIES
   end
 end
