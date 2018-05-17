@@ -6,19 +6,16 @@ These are tools to save me from having to copy and paste the same state
 constants across tools when I need to iterate thru or populate a list of
 states (which is basically all the time).
 
-Quick and dirty for now. Probably don't use this yet.
-
 TODOS:
 
-* push to rubygems
-* all those functions I've written that are 'count west virginia and virginia separately'
-* option rename DC to whatever bonkers things people put down
+* option rename DC to whatever bonkers things people put down in text
+* count DC (and other states, I guess) when AKA strings show up
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
+```rb
 gem 'state_geo_tools' 
 ```
 
@@ -58,6 +55,30 @@ Prefer a two letter code instead of the full string? You're covered:
 => ["AS", "FM", "GU", "MH", "MP", "PW", "PR", "VI"]
 ```
 
+### Count instances of states in a string
+
+There is a convenience method provided to scan a string for state or territory
+names and return a count. 
+
+Coming eventually: Handling all the aliases for Washington, DC.
+
+```rb
+> require 'state_geo_tools'
+> StateGeoTools.count_states_in('Pantera were from Texas, I saw them in Indiana')
+=> {"Texas"=>1, "Indiana"=>1}
+
+> StateGeoTools.count_territories_in('The Simpsons are going to Guam!')
+=> {"Guam"=>1}
+
+# There's some special handling for Washington/Washington DC and Virginia/West
+# Virginia. It doesn't work flawlessly yet, so heads up!
+> StateGeoTools.count_states_in('Virginia and West Virginia are for lovers')
+=> {"West Virginia"=>1, "Virginia"=>1}
+
+> StateGeoTools.count_states_in('Washington and Washington, DC are on opposite sides of the country')
+=> {"Washington"=>1}
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run
@@ -71,8 +92,10 @@ git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygem
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/state_geo_tools.
+Bug reports and pull requests are welcome on GitHub at
+https://github.com/colinxfleming/state_geo_tools.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the
+[MIT License](http://opensource.org/licenses/MIT).
