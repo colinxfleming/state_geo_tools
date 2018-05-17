@@ -6,11 +6,8 @@ These are tools to save me from having to copy and paste the same state
 constants across tools when I need to iterate thru or populate a list of
 states (which is basically all the time).
 
-Quick and dirty for now. Probably don't use this yet.
-
 TODOS:
 
-* push to rubygems
 * option rename DC to whatever bonkers things people put down in text
 * count DC (and other states, I guess) when AKA strings show up
 
