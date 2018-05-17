@@ -4,9 +4,9 @@ require 'test_helper'
 
 # Test state constant contents
 class CountersTest < Minitest::Spec
-  describe 'counting' do
-    before { @states = StateGeoTools.states }
+  before { @states = StateGeoTools.states }
 
+  describe 'counting' do
     it 'should return a count of values in a string' do
       str = 'Michigan, New Mexico, and California, and Michigan'
       result = StateGeoTools.count_instances(str, @states)
@@ -21,6 +21,14 @@ class CountersTest < Minitest::Spec
       assert_equal result['Michigan'], 3
     end
 
+    it 'should strip out empty states' do
+      str = 'Oklahoma'
+      result = StateGeoTools.count_instances str, @states
+      refute result['Michigan']
+    end
+  end
+
+  describe 'handling edge cases with geo_regex' do
     it 'should not overlap counts on west virginia and virginia' do
       str = 'West Virginia and Virginia'
       result = StateGeoTools.count_instances str, @states
@@ -28,10 +36,10 @@ class CountersTest < Minitest::Spec
       assert_equal result['West Virginia'], 1
     end
 
-    it 'should strip out empty states' do
-      str = 'Oklahoma'
+    it 'should not overlap counts on washington and washington, dc' do
+      str = 'Washington and Washington, D.C.'
       result = StateGeoTools.count_instances str, @states
-      refute result['Michigan']
+      assert_equal result['Washington'], 1
     end
   end
 end

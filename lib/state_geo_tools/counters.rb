@@ -17,6 +17,7 @@ module StateGeoTools
       # Need special handling for the great state of Virginia,
       # because of West Virginia.
       return /(?<!west )virginia/i if geo == 'Virginia'
+      return /washington(?!, D\.*C\.*)/i if geo == 'Washington'
       /#{geo}/i
     end
   end
