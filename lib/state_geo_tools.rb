@@ -1,9 +1,14 @@
+# frozen_string_literal: true
+
 require 'state_geo_tools/version'
 require 'state_geo_tools/state_constants'
 require 'state_geo_tools/territory_constants'
+require 'state_geo_tools/counters'
 
-# Base class
+# Base class / public API.
 module StateGeoTools
+  extend StateGeoTools::Counters
+
   def self.states
     States::STATES
   end
@@ -18,5 +23,13 @@ module StateGeoTools
 
   def self.territory_codes
     Territories::TERRITORY_CODES
+  end
+
+  def self.count_states_in(string)
+    count_instances string, States::STATES
+  end
+
+  def self.count_territories_in(string)
+    count_instances string, Territories::TERRITORIES
   end
 end

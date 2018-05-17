@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 # Test the class public api!
@@ -24,6 +26,22 @@ class StateGeoToolsTest < Minitest::Spec
     it 'should spit out territory codes' do
       assert_equal StateGeoTools.territory_codes,
                    StateGeoTools::Territories::TERRITORY_CODES
+    end
+  end
+
+  describe 'counters methods' do
+    before do
+      @str = 'The Simpsons are from New Mexico, and will visit Guam.'
+    end
+
+    it 'should count states from a string' do
+      result = StateGeoTools.count_states_in @str
+      assert_equal result['New Mexico'], 1
+    end
+
+    it 'should count territories from a string' do
+      result = StateGeoTools.count_territories_in @str
+      assert_equal result['Guam'], 1
     end
   end
 end

@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module StateGeoTools
+  # USA state constants (and DC)
   module States
     STATE_DATA = [
       { name: 'Alabama', abbrev: 'AL' },

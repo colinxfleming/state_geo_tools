@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module StateGeoTools
+  # Constants for US territories
   module Territories
     TERRITORY_DATA = [
       { name: 'American Samoa', abbrev: 'AS' },
