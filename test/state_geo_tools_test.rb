@@ -35,12 +35,12 @@ class StateGeoToolsTest < Minitest::Spec
     end
 
     it 'should count states from a string' do
-      result = StateGeoTools.count_states_in(@str)
+      result = StateGeoTools.count_states_in @str
       assert_equal result['New Mexico'], 1
     end
 
     it 'should count territories from a string' do
-      result = StateGeoTools.count_territories_in(@str)
+      result = StateGeoTools.count_territories_in @str
       assert_equal result['Guam'], 1
     end
   end
