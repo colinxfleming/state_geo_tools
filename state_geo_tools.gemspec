@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['colinxfleming']
   spec.email         = ['c3flemin@gmail.com']
 
-  spec.summary       = 'Some stock US geo related constants and functions'
-  spec.description   = 'I got sick of writing the same US geo helper.'
+  spec.summary       = 'A US geography/state utility.'
+  spec.description   = 'I got sick of copying the same US states constant.'
   spec.homepage      = 'https://github.com/colinxfleming/state_geo_tools'
   spec.license       = 'MIT'
 
@@ -32,6 +32,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.14'
-  spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'minitest', '~> 5.0'
+  spec.add_development_dependency 'rake', '~> 10.0'
 end
