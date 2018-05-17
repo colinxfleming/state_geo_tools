@@ -11,20 +11,29 @@ class CountersTest < Minitest::Spec
 
     it 'should return a count of values in a string' do
       str = 'Michigan, New Mexico, and California, and Michigan'
-      assert_equal StateGeoTools.count_instances(str, @states),
-                   { 'New Mexico' => 1, 'Michigan' => 2, 'California' => 1 }
+      result = StateGeoTools.count_instances(str, @states)
+      assert_equal result['New Mexico'], 1
+      assert_equal result['Michigan'], 2
+      assert_equal result['California'], 1
     end
 
     it 'should count case-insensitively' do
       str = 'Michigan michigan michigan'
-      assert_equal StateGeoTools.count_instances(str, @states),
-                   { 'Michigan' => 3 }
+      result = StateGeoTools.count_instances str, @states
+      assert_equal result['Michigan'], 3
     end
 
     it 'should not overlap counts on west virginia and virginia' do
       str = 'West Virginia and Virginia'
-      assert_equal StateGeoTools.count_instances(str, @states),
-                   { 'Virginia' => 1, 'West Virginia' => 1 }
+      result = StateGeoTools.count_instances str, @states
+      assert_equal result['Virginia'], 1
+      assert_equal result['West Virginia'], 1
+    end
+
+    it 'should strip out empty states' do
+      str = 'Oklahoma'
+      result = StateGeoTools.count_instances str, @states
+      refute result['Michigan']
     end
   end
 end
