@@ -5,9 +5,7 @@ require 'test_helper'
 # Test state constant contents
 class CountersTest < Minitest::Spec
   describe 'counting' do
-    before do
-      @states = StateGeoTools.states
-    end
+    before { @states = StateGeoTools.states }
 
     it 'should return a count of values in a string' do
       str = 'Michigan, New Mexico, and California, and Michigan'

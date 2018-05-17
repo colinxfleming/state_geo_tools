@@ -5,7 +5,7 @@ require 'state_geo_tools/state_constants'
 require 'state_geo_tools/territory_constants'
 require 'state_geo_tools/counters'
 
-# Base class
+# Base class / public API.
 module StateGeoTools
   extend StateGeoTools::Counters
 
