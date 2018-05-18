@@ -6,6 +6,8 @@ These are tools to save me from having to copy and paste the same state
 constants across tools when I need to iterate thru or populate a list of
 states (which is basically all the time).
 
+[Docs are here.](https://www.rubydoc.info/github/colinxfleming/state_geo_tools/master)
+
 TODOS:
 
 * option rename DC to whatever bonkers things people put down in text
