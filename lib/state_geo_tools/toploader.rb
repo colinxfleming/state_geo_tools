@@ -12,7 +12,9 @@ module StateGeoTools
         raise(NotInSetError, "#{x} #{TOPLOAD_ERROR}") unless set.include?(x)
       end
 
-      set.sort_by { |item| topload.index(item) || Float::INFINITY }
+      # If not in the topload set, offset the ordering by a few hundred so it
+      # maintains its current order
+      set.sort_by { |item| topload.index(item) || (500 + set.index(item)) }
     end
   end
 end

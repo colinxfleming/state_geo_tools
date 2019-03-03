@@ -8,11 +8,6 @@ states (which is basically all the time).
 
 [Docs are here.](https://www.rubydoc.info/github/colinxfleming/state_geo_tools/master)
 
-TODOS:
-
-* option rename DC to whatever bonkers things people put down in text
-* count DC (and other states, I guess) when AKA strings show up
-
 ## Installation
 
 Add this line to your application's Gemfile:
