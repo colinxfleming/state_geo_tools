@@ -57,6 +57,18 @@ Prefer a two letter code instead of the full string? You're covered:
 => ["AS", "FM", "GU", "MH", "MP", "PW", "PR", "VI"]
 ```
 
+### Toploading
+
+For convenience, an optional argument is provided to pull certain items up to
+the top of a list. Pass `topload: [elements]` to `states`, `territories`,
+`state_codes`, or `territory_codes` to pull a few to the front. For example:
+
+```rb
+> require 'state_geo_tools'
+> StateGeoTools.state_codes(topload: ['MI', 'DC', 'TX'])
+=> ["MI", "DC", "TX", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "UT", "VT", "VA", "WA", "WV", "WI", "AL", "WY", "AK", "AZ"]
+```
+
 ### Count instances of states in a string
 
 There is a convenience method provided to scan a string for state or territory
