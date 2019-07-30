@@ -3,7 +3,6 @@
 require 'state_geo_tools/version'
 require 'state_geo_tools/state_constants'
 require 'state_geo_tools/territory_constants'
-require 'state_geo_tools/counters'
 require 'state_geo_tools/toploader'
 
 # Because I got sick of copying and pasting arrays of states everywhere, this
@@ -15,7 +14,6 @@ require 'state_geo_tools/toploader'
 #
 # See the README for examples.
 module StateGeoTools
-  extend StateGeoTools::Counters
   extend StateGeoTools::Toploader
 
   # Return an array of states and the District of Columbia.
