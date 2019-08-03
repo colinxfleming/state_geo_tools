@@ -64,30 +64,6 @@ the top of a list. Pass `topload: [elements]` to `states`, `territories`,
 => ["MI", "DC", "TX", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "UT", "VT", "VA", "WA", "WV", "WI", "AL", "WY", "AK", "AZ"]
 ```
 
-### Count instances of states in a string
-
-There is a convenience method provided to scan a string for state or territory
-names and return a count. 
-
-Coming eventually: Handling all the aliases for Washington, DC.
-
-```rb
-> require 'state_geo_tools'
-> StateGeoTools.count_states_in('Pantera were from Texas, I saw them in Indiana')
-=> {"Texas"=>1, "Indiana"=>1}
-
-> StateGeoTools.count_territories_in('The Simpsons are going to Guam!')
-=> {"Guam"=>1}
-
-# There's some special handling for Washington/Washington DC and Virginia/West
-# Virginia. It doesn't work flawlessly yet, so heads up!
-> StateGeoTools.count_states_in('Virginia and West Virginia are for lovers')
-=> {"West Virginia"=>1, "Virginia"=>1}
-
-> StateGeoTools.count_states_in('Washington and Washington, DC are on opposite sides of the country')
-=> {"Washington"=>1}
-```
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run

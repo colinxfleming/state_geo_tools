@@ -14,7 +14,7 @@ module StateGeoTools
       { name: 'Connecticut', code: 'CT' },
       { name: 'Delaware', code: 'DE' },
       # Statehood for DC: An opinion I am expressing in code by including DC
-      { name: 'District of Columbia', code: 'DC', also_known_as: ['Washington, DC', 'Washington DC'] },
+      { name: 'District of Columbia', code: 'DC' },
       { name: 'Florida', code: 'FL' },
       { name: 'Georgia', code: 'GA' },
       { name: 'Hawaii', code: 'HI' },
